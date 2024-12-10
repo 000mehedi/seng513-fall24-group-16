@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - '8800:80' # Host-Port:Container-Port
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - '5001:8080' # Host-Port:Container-Port
+    volumes:
+      - ./backend/database.db:/app/database.db

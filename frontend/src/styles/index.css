@@ -1,0 +1,22 @@
+/* 
+ * Put global styles in this file
+ * Put page specific styles in the page's style directory. Example: styles/landing
+ * Do not put component styles in this file
+ */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}

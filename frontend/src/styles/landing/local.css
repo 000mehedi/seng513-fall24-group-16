@@ -1,0 +1,306 @@
+/* 
+ * Put styles for the landing page in here 
+ */
+
+#landing {
+  display: flex;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    flex: 1;
+    box-sizing: border-box;
+    gap: 50px;
+}
+
+/* Illustration */
+.illustration-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration.desktop {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+}
+
+.illustration.mobile {
+    width: 100%;
+    max-width: 400px;
+    display: none;
+}
+
+/* Text content */
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.2;
+    white-space: pre-line;
+    max-width: 500px;
+    text-align: left;
+}
+
+.heading .word.opacity-1::after {
+  content: '';
+  display: block;
+}
+
+.heading .word.opacity-2::after {
+  content: '';
+  display: block;
+}
+
+.heading .word.opacity-3::after {
+  content: '';
+  display: block;
+}
+
+.opacity-1 {
+  opacity: 0.3;
+}
+
+.opacity-2 {
+  opacity: 0.5;
+}
+
+.opacity-3 {
+  opacity: 0.7;
+}
+
+.opacity-4 {
+  opacity: 1;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.equipment-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.auth-buttons2 .equipment-button {
+  width: 350px;
+}
+
+.equipment-button {
+  background-color: #5f5084;
+  color: #fff;
+  border: none;
+}
+
+.equipment-button:hover {
+  background-color: #5a54d1;
+}
+
+.reserve-button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.reserve-button:hover {
+  background-color: #f0f0f0;
+}
+
+.auth-buttons2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-buttons2 .reserve-button {
+  width: 350px;
+}
+
+.account-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5px;
+  width: 350px;
+  gap: 15px;
+}
+
+.profile:hover, .logout:hover {
+  background-color: #ffffff;
+  border: 1px solid #333;
+}
+
+.profile, .logout {
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #d4d4d4;
+  color: #333;
+  border: 1px solid #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .text-container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .text-container {
+    width: 300px;
+  }
+}
+
+@media (min-width: 769px) {
+
+    /* Desktop styles */
+    .auth-buttons2 {
+        display: none;
+    }
+
+    .logo-container2 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+  /* Mobile styles */
+  .illustration.desktop {
+      display: none;
+  }
+
+  .illustration.mobile {
+      display: block;
+      scale: 0.8;
+      margin-bottom: -20px;
+  }
+
+  .content {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .text-content {
+      text-align: center;
+  }
+
+  .heading {
+      font-size: 1.6rem;
+      text-align: center;
+  }
+
+  .subheading {
+      display: none;
+  }
+
+  .text-container {
+      order: 2;
+  }
+
+  .illustration-container {
+      order: 1;
+  }
+
+  .heading .word.opacity-1::after {
+    display: inline;
+    content: "\00a0";
+  }
+  
+  .heading .word.opacity-2::after {
+    display: inline;
+    content: "\00a0";
+  }
+
+  .heading .word {
+    opacity: 1;
+  }
+
+  #landing {
+    display: none;
+  }
+
+  .logo-container2 {
+    font-size: 50px;
+  }
+
+  .container {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+
+    /* Extra small devices */
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .subheading {
+        font-size: 0.9rem;
+    }
+
+    .illustration {
+        max-width: 250px;
+    }
+
+    .equipment-button, .reserve-button, .account-buttons , #landing-login, #landing-create-account{
+      max-width: 300px;
+    }
+}
+
+@media (max-width: 380px) {
+
+  /* Extra small devices */
+  .heading {
+      font-size: 1.25rem;
+  }
+
+  .equipment-button, .reserve-button, .account-buttons, #landing-login, #landing-create-account {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  /* Extra small devices */
+  .heading {
+      font-size: 1.1rem;
+  }
+
+  .equipment-button, .reserve-button, .account-buttons, #landing-login, #landing-create-account {
+    max-width: 280px;
+  }
+}
